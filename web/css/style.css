@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*:focus,
+*:hover {
+    outline: none;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("../img/bg-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    /*overflow: hidden;*/
+    zoom: 80%;
+}
+
+.body-scroll-lock {
+    overflow: hidden;
+}
+
+/* Header-Nav */
+.center-item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+header {
+    height: 100px;
+    background: rgba(255, 255, 255, 0.41);
+}
+
+.nav {
+    min-width: 1200px;
+    max-width: 62.5%;
+    margin: 0.5rem;
+    padding: 10px 10px 0;
+    font-size: 1.5rem;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.select {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.select>h3 {
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+/* Style changes for every element in nav */
+.select input,
+.select button,
+.add-btn button {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 15px 0 0 15px;
+    color: #82c7ec;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* custom style changes for particular element in nav */
+.add-btn button {
+    border-radius: 15px;
+}
+
+/* custom style changes for particular element in nav */
+.select button {
+    border-radius: 0 15px 15px 0;
+}
+
+/* Hover changes for every element in nav */
+.select input:hover,
+.select button:hover,
+.add-btn button:hover {
+    color: white;
+    background-color: #82c7ec;
+    transition: all 0.3s ease;
+}
+
+/* custom style changes for particular element in nav */
+.select input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(74%) sepia(59%) saturate(465%) hue-rotate(171deg) brightness(93%) contrast(98%);
+}
+
+.select input::-webkit-calendar-picker-indicator:hover {
+    filter: invert(1);
+}
+
+/* Content dic */
+.content {
+    min-width: 1300px;
+    max-width: 62.5%;
+    display: flex;
+    text-align: left;
+    margin: 25px auto;
+    padding: 10px 0 60px;
+    background: linear-gradient(107.71deg,
+            rgba(255, 255, 255, 0.39) 0%,
+            rgba(255, 255, 255, 0.15) 100%);
+    border-radius: 35px;
+    backdrop-filter: blur(100px);
+    /*transition: all 1.5s ease-in-out;*/
+}
+
+.content-child {
+    width: 1200px;
+    margin: auto;
+}
+
+/* Deleting the hole tab */
+.delete-transition {
+    -moz-transform: translateY(75rem) rotateZ(180deg);
+    -webkit-transform: translateY(75rem) rotateZ(180deg);
+    transform: translateY(75rem) rotateZ(180deg);
+    opacity: 0;
+}
+
+/* CLint data tab */
+.title {
+    display: grid;
+    grid-template-columns: 300px 105px 152px 300px 300px;
+    grid-column-gap: 10px;
+    padding: 20px 0 0;
+}
+
+.content-child label {
+    font-size: 2rem;
+    padding-right: 10px;
+}
+
+.slot {
+    height: 60px;
+    background: rgba(255, 255, 255, 0.76);
+    border-radius: 5px;
+    color: #2c64f2;
+    transition: all 5s ease;
+}
+
+.grid-style {
+    display: grid;
+    position: relative;
+    grid-template-columns: 300px 105px 152px 300px 300px;
+    grid-column-gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.div-style {
+    transform: none;
+    margin-bottom: 70px;
+}
+
+.slot label {
+    font-size: 1.5rem;
+}
+
+/* Filling and Payment  */
+span.icon-style {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-color: #ff2a2a;
+}
+
+.item-complete {
+    background-color: #2ae8d8 !important;
+}
+
+.icon-style img {
+    margin: 5px 4.5px;
+    cursor: pointer;
+}
+
+.icon-style img:hover {
+    opacity: 0.5;
+}
+
+/* Hidden Div */
+.hidden-style {
+    position: absolute;
+    top: 60px;
+    width: 1150px;
+    margin: 0 2%;
+    display: flex;
+    justify-content: space-around;
+    text-align: end;
+    padding: 10px 0 0;
+    background: rgba(255, 255, 255, 0.76);
+    border-radius: 0 0 5px 5px;
+    z-index: 2;
+}
+
+.hidden {
+    visibility: collapse;
+}
+
+
+/* Delete Button */
+.grid-style button {
+    position: absolute;
+    right: -25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    background-color: #ff2a2a;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.grid-style button span {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.grid-style button:hover {
+    opacity: 1;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+
+/* New member form */
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-size: 0;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+#close,
+#close-query {
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    color: #2d35e8;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.add-clint-parent,
+.data-query-style {
+    width: 700px;
+    height: 800px;
+    background: linear-gradient(72.44deg, #2c64f2 0%, #2ae8d8 100%);
+    border-radius: 50px;
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.add-clint,
+.data-query {
+    width: 700px;
+    height: 800px;
+    background: linear-gradient(107.71deg,
+            rgba(255, 255, 255, 0.325) 0%,
+            rgba(255, 255, 255, 0.125) 100%);
+    backdrop-filter: blur(100px);
+    border-radius: 50px;
+    padding: 40px 50px;
+}
+
+.add-clint form,
+.data-query form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    font-size: 1.5rem;
+}
+
+.add-clint form button,
+.add-clint form input,
+.data-query form button,
+.data-query form input {
+    padding: 10px;
+    height: 50px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    border: none;
+    font-size: 1.3rem;
+    color: #2c64f2;
+    transition: all 0.3s ease;
+}
+
+.add-clint form button,
+.data-query form button {
+    background: #2d35e8;
+    border-radius: 50px;
+    margin: 30px 20%;
+    color: white;
+}
+
+.add-clint-state {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.7fr 0.5fr;
+}
+
+.add-clint-state div {
+    color: #2c64f2;
+}
+
+.add-clint-state div input[type="radio"] {
+    height: 15px;
+    width: 15px;
+}
+/* cloning the data base */
+.data-query-style,
+.data-query,
+.data-query form {
+    height: auto;
+    width: auto;
+    padding:50px 50px;
+}
+.data-query form{
+    margin: 20px auto 10px;
+}

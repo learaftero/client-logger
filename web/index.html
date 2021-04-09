@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="./img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="./css/style.css" rel="stylesheet"/>
+    <title>Client Logger</title>
+</head>
+
+<body>
+<div class="wraper">
+    <header class="center-item">
+        <div class="nav">
+            <div class="add-btn">
+                <button id="member-add" type="submit">Add New Members</button>
+            </div>
+            <div class="select">
+                <h3>Years/Months</h3>
+                <input id="start" min="2021-01" name="start" type="month" value=""/>
+                <button type="submit" id="search-btn">
+                    <span class="material-icons">addchart</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="content">
+        <div class="content-child" id="tab-div">
+            <div class="title">
+                <label for="name">Name</label>
+                <label for="filling">Filling</label>
+                <label for="payment">Payment</label>
+                <label for="gstin">GSTIN</label>
+                <label for="company">Company</label>
+            </div>
+            <!-- Information -->
+            <div class="content-row"></div>
+
+        </div>
+    </section>
+    <!-- Form -->
+    <section class="bg-modal">
+        <div class="add-clint-parent">
+            <div class="add-clint">
+                <div id="close">+</div>
+                <form class="form">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text"/>
+                    <label for="gstin">GSTIN</label>
+                    <input id="gstin" name="gstin" spellcheck="false" type="text"/>
+                    <label for="companyName">Company Name</label>
+                    <input id="companyName" name="company_name" type="text"/>
+                    <div class="add-clint-state">
+                        <label for="filling">Filling</label>
+                        <label for="payment">Payment</label>
+                        <div>
+                            <input id="filling-yes" name="filling_state" type="radio" value="yes"/>
+                            <label for="filling-yes">Yes</label>
+                            <br/>
+                            <input checked="true" id="filling-no" name="filling_state" type="radio" value="no"/>
+                            <label for="filling-no">No</label>
+                        </div>
+                        <div>
+                            <input id="payment-yes" name="payment_state" type="radio" value="yes"/>
+                            <label for="payment-yes">Yes</label>
+                            <br/>
+                            <input checked="true" id="payment-no" name="payment_state" type="radio" value="no"/>
+                            <label for="payment-no">No</label>
+                        </div>
+                    </div>
+                    <label for="gstin-login-id">GSTIN Login Id</label>
+                    <input id="gstin-login-id" name="gstin_login_id" spellcheck="false" type="text"/>
+                    <label for="gstin-password">GSTIN Password</label>
+                    <input id="gstin-password" name="gstin_password" spellcheck="false" type="text"/>
+                    <button id="add-member" type="submit">ADD</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Query Form for Data Base -->
+    <section class="bg-modal">
+        <div class="data-query-style">
+            <div class="data-query">
+                <div id="close-query">+</div>
+                <form id="query-form">
+                    <label for="this-month">The Month-Year to cloned:</label>
+                    <input id="this-month" min="2021-01" name="this-month" type="month" value="" required/>
+
+                    <label for="from-month">From Month-Year to cloned:</label>
+                    <input id="from-month" min="2021-01" name="from-month" type="month" value="" required/>
+
+                    <label for="to-month">To Month-Year to cloned:</label>
+                    <input id="to-month" min="2021-01" name="to-month" type="month" value="" required/>
+
+                    <button id="search-month-year" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="./js/index.js" type="module"></script>
+<script src="/eel.js" type="text/javascript"></script>
+</body>
+
+</html>
